@@ -2,9 +2,10 @@
 
 /**
  * Main -> entry point
- * Description : this program will print a string with function put
- * Return: 0 (success)
  *
+ * Description : this program will print a string with function put
+ *
+ * Return: 0 (success)
  */
 
 int main(void)
