@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <unistd.h>
+
 /**
- * main - Entry point 
+ * main - Entry point
  *
- * Description: print a quote using fput function
+ * Description: print a quote using write function
  *
  * Return: 1 (error).
 */
+
 int main(void)
-{       
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+{
+	char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, msg, 50);
 	return (1);
 }
