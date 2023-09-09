@@ -19,7 +19,7 @@ int main(void)
 		st++;
 	}
 
-	while (ST <= 'z')
+	while (ST <= 'Z')
 	{
 		putchar(ST);
 		ST++;
