@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*
+/**
  * main - entry point
  *
  * Description: print all single digit numbers
  *
- * return: 0 (success)
+ * Return: 0 (success)
  */
 
 int main(void)
