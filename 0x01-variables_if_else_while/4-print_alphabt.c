@@ -10,15 +10,15 @@
  */
 int main(void)
 {
-	char first_letter = 'a';
+	char st = 'a';
 
-	while (first_letter <= 'z')
+	while (st <= 'z')
 	{
-		if (first_letter != 'e' && first_letter != 'q')
+		if (st != 'e' && st != 'q')
 		{
-			putchar(firt_letter)
+			putchar(st);
 		}
-		first_letter++;
+		st++;
 	}
 
 	putchar('\n');
