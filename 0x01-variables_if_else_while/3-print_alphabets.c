@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char st = 'n';
+	char st = 'a';
 	char ST = 'A';
 
 	while (st <= 'z')
