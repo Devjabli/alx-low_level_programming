@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char value[] = "0123456789123456";
+	char value[] = "0123456789abcdef";
 	int i;
 
 	for (i = 0; i < 16; i++)
