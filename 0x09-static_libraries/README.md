@@ -1,1 +1,0 @@
-static and dynamic libraries
