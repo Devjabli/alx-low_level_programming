@@ -1,15 +1,14 @@
 #include "main.h"
 int rec_sqrt_recursion(int n, int i);
 
+
 /**
- * _sqrt_recursion - main function
+ * _sqrt_recursion - returns square root
  *
  * @n: parameter function
  *
- * Return - n
+ * Return: rec_sqrt_recursion
 */
-
-
 
 int _sqrt_recursion(int n)
 {
@@ -33,6 +32,6 @@ int rec_sqrt_recursion(int n, int i)
 		return (i);
 	if (i * i > n)
 		return (-1);
-	return (rec_sqrt_recursion(n, i+1));
+	return (rec_sqrt_recursion(n, i + 1));
 
 }
