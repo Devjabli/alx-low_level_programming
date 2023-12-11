@@ -1,26 +1,25 @@
 #include "lists.h"
 
 /**
- * add_nodeint - adding list int
- * @head: header of the link list
- * @n: data list
+ * add_nodeint_end - add int at the end
+ * @head: pointer of the start node link list
+ * @n: data of link list
  * Return: newNode
- */
+*/
 
-listint_t *add_nodeint(listint_t **head, const int n)
+
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *newNode = malloc(sizeof(listint_t));
 
 	if (!head || !newNode)
-	{
 		return (NULL);
-	}
 	else
 	{
-		newNode->next = NULL;
 		newNode->n = n;
-		newNode->next = *head;
+		newNode->next = NULL;
 		*head = newNode;
+		
 	}
 	return (newNode);
 }
