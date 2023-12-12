@@ -5,21 +5,32 @@
  * @head: pointer of the start node link list
  * @n: data of link list
  * Return: newNode
-*/
-
+ */
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *newNode = malloc(sizeof(listint_t));
+	listint_t *new, *tmp;
 
-	if (!head || !newNode)
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
 		return (NULL);
-	else
+
+	new->n = n;
+	new->next = NULL;
+
+	if (*head == NULL)
 	{
-		newNode->n = n;
-		newNode->next = NULL;
-		*head = newNode;
-		
+		*head = new;
+		return (new);
 	}
-	return (newNode);
+	tmp = *head;
+
+	while (tmp->next != NULL)
+	{
+		tmp = tmp->next;
+	}
+
+	tmp->next = new;
+
+	return (new);
 }
