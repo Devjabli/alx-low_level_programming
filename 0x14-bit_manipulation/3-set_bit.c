@@ -3,7 +3,7 @@
 /**
  * set_bit - sets the val of a bit to 1 at a given index.
  * @n: number to set
- * @index: index 
+ * @index: index
  *
  * Return: 1 if success, or -1 if an error occurred
  */
