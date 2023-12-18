@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * strlen - returns the length
+ * _strlen - returns the length
  * @c: string lead for length to check
  *
  * Return: int length
 */
 
-int strlen(char *c)
+int _strlen(char *c)
 {
 	int i = 0;
 
@@ -31,7 +31,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int fl;
 	ssize_t sizes = 0;
-	ssize_t len = strlen(text_context);
+	ssize_t len = _strlen(text_content);
 
 	if (!filename)
 		return (-1);
@@ -39,7 +39,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fl == -1)
 		return (-1);
 	if (len)
-		sizes = write(fl, text_context, len);
+		sizes = write(fl, text_content, len);
 	close(fl);
 	return (sizes == len ? 1 : -1);
 }
