@@ -10,25 +10,18 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int lts;
-	int rwr;
+	ssize_t lg;
+	ssize_t sizes = 0;
+	ssize_t len = _strlen(text_content);
 
 	if (!filename)
 		return (-1);
-
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (fd == -1)
-		text_content = "";
-
-	for (lts = 0; text_content[lts]; lts++)
-		;
-
-	rwr = write(fd, text_content, lts);
-
-	if (rwr == -1)
 		return (-1);
-
+	if (len)
+		sizes = write(fd, text_content, len);
 	close(fd);
-
-	return (1);
+	lg = sizes == len ? 1 : -1;
+	return (lg);
 }
